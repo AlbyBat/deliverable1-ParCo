@@ -16,35 +16,35 @@ This project implements a parallel SpMV (Sparse Matrix-Vector Multiplication) al
 
 ## Quick Start
 
-### Local Execution (Linux) (Personal Computer)
+## Local Execution (Linux) (Personal Computer)
 
 Don't forget to change your machine theorical peak performance and total cores
-# Compile with optimization and OpenMP support
+### Compile with optimization and OpenMP support
 g++ -O3 -fopenmp -o benchmark benchmark.cpp
 
-# Run the benchmark
+### Run the benchmark
 ./benchmark
 
-### HPC Execution
+## HPC Execution
 
-# 1. Login to HPC cluster
+## 1. Login to HPC cluster
 ssh username@hpc.unitn.it
 
-# 2. Create project directory
+## 2. Create project directory
 mkdir deliverable1
 cd deliverable1
 
-# 3. Transfer files from local machine (run this on your local machine)
+## 3. Transfer files from local machine (run this on your local machine)
 scp benchmark.cpp start.pbs username@hpc.unitn.it:~/deliverable1/
 
-# 4. Prepare files (on HPC cluster)
+## 4. Prepare files (on HPC cluster)
 dos2unix *.pbs *.cpp
 
-# 5. Submit job to queue
+## 5. Submit job to queue
 qsub start.pbs
 
-# 6. Monitor job status
+## 6. Monitor job status
 qstat -u username
 
-# 7. Check output after completion
+## 7. Check output after completion
 cat csr_benchmark.out
